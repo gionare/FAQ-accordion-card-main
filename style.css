@@ -14,18 +14,9 @@ body {
   font-family: Kumbh Sans;
   font-style: normal;
 }
-.header-img {
-  background-image: url("images/illustration-woman-online-mobile.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 237px;
-  height: 180px;
-  position: absolute;
-  top: 17.7%;
-}
 .card {
   width: 327px;
-  height: 535px;
+  /* height: 535px; */
   border-radius: 23px;
   background: #fff;
   box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.5);
@@ -33,40 +24,88 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.header-img {
+  width: 237px;
+  height: 180px;
+  background-image: url("images/illustration-woman-online-mobile.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -110px;
+}
+.shade-img {
+  width: 240px;
+height: 104px; 
+background-image:  url("images/bg-pattern-mobile.svg");
+position: absolute;
+top: -10px;
 }
 .header {
   color: #1e1f36;
   font-size: 32px;
   font-weight: 700;
   line-height: normal;
-  margin-bottom: 38px;
-  margin: auto;
+  margin: 120px auto 30px auto;
 }
 
+.accordionSection {
+  /* border: solid; */
+  margin: 24px;
+}
 .accordion {
+  border: none;
+  border-bottom: 1px solid #ccc;
   cursor: pointer;
   padding: 10px;
-  border: none;
-  text-align: left;
   width: 100%;
   background-color: white;
   font-size: 14px;
   font-weight: 400;
 }
+.accordion p{
+  text-align: left;
+  color: #4B4C5F;
+font-family: Kumbh Sans;
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: normal; 
+}
 .accordion:hover {
   color: #f47b56;
 }
-.accordion:active {
-  background-color: greenyellow;
+.accordion:active p{  /* works while on click */
+color: #f47b56;
+font-size: 14px;
+font-weight: 700;
 }
-.accordion::after .answer-panel {
+/* creating new class .pressed  */
+/* and activate it using script.js */
+.accordion.pressed {
+
+}
+/* why this is not working? i had to add .pressed ClassList toggle  ?????????? */
+.accordion::after {
+font-family: Kumbh Sans;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: normal; 
 }
 
 .answer-panel {
   display: none;
   padding: 10px;
   background-color: #fff;
-  border: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  color: #787887;
+font-family: Kumbh Sans;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 18px; /* 150% */ 
 }
 
 
