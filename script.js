@@ -1,43 +1,65 @@
-// Write JavaScript to Toggle Accordion:
-// Create a JavaScript file (e.g., script.js) and write code
-// to toggle the visibility of the answer panel when the
-// button is clicked.
-
-// using  classList.toggle
-
-// Get the button and answer panel elements
+//  <button class="accordion">
 let acc = document.querySelectorAll(".accordion");
+const accArray = [...acc]
 console.log(acc);
+
+
 // .button #accordionContent 
-let accordionContent = document.getElementById('accordionContent');
+let accordionContent = document.getElementsByClassName('accordionContent');
 console.log(accordionContent);
-let arrow = document.getElementsByClassName('arrow')
+
+
+// <p> <img class="arrow"> </p>
+let arrow = document.querySelectorAll('.arrow')
 console.log(arrow);
 
-acc.forEach(function (accordion) {
-  let answerPanel = accordion.nextElementSibling;
+// open answer section 
+// open answer will be named as:  openSection
+let openSection = null;
+
+
+accArray.forEach(function (eachAccordion) {
+
+  // <div class="answer-panel">
+  let answerPanel = eachAccordion.nextElementSibling;
   console.log(answerPanel);
   
-  accordion.addEventListener("click", function () {
+  eachAccordion.addEventListener("click", function () {
 
-    // Toggle the 'active' class on the button to change its appearance
-    // accordion.classList.toggle("active");
-    // Toggle the visibility of the answer panel
-    // Toggle the 'pressed' class on the clicked accordion
-    // accordion.classList.toggle("pressed");
-
-    if (answerPanel.style.display === "block") {
-      answerPanel.style.display = "none";
-      accordionContent.style.fontWeight = '400';
-      arrow.style.url = "images/icon-arrow-down.svg"
+    if (eachAccordion == openSection) {
+      
+      // close on click
+      eachAccordion.nextElementSibling.style.display = "none";
+      console.log(eachAccordion.nextElementSibling);
+      openSection = null;
+      
+      eachAccordion.querySelector(".arrow").src = "images/icon-arrow-down.svg"
+     
+      eachAccordion.querySelector('.accordionContent').style.fontWeight = '400';
+      // arrow.style.url = "images/icon-arrow-down.svg"
     } else {
-      answerPanel.style.display = "block";
-      accordionContent.style.fontWeight = '700';
-      arrow.src = "images/icon-arrow-up.svg"
+
+      if(openSection != null) {
+
+        // close previous on click
+        openSection.nextElementSibling.style.display = "none";
+        eachAccordion.querySelector(".arrow").src = "images/icon-arrow-down.svg"
+
+        eachAccordion.querySelector('.accordionContent').style.fontWeight = '400';
+      }
+      
+      // open on click 
+      eachAccordion.nextElementSibling.style.display = "block";
+      openSection = eachAccordion;
+      console.log(openSection);
+
+      eachAccordion.querySelector(".arrow").src = "images/icon-arrow-up.svg"
+
+      eachAccordion.querySelector('.accordionContent').style.fontWeight = '700';
     }
     
   });
 });
 
 
-//to ask --?-- need to put accordion.addEventListener in loop frobably? and choose it by loop index?!
+//to ask --?-- why third eachAccordion is not getting bold while open
