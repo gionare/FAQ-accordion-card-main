@@ -26,21 +26,24 @@ body {
   align-items: center;
   position: relative;
 }
+.image-background {
+  position: absolute;
+  top: -110px;
+}
 .header-img {
   width: 237px;
   height: 180px;
   background-image: url("images/illustration-woman-online-mobile.svg");
-  background-size: cover;
   background-repeat: no-repeat;
-  position: absolute;
-  top: -110px;
+  background-size: cover;
+
 }
 .shade-img {
   width: 240px;
-height: 104px; 
-background-image:  url("images/bg-pattern-mobile.svg");
-position: absolute;
-top: -10px;
+  height: 104px;
+  background-image: url("images/bg-pattern-mobile.svg");
+  position: relative;
+  top: -80px;
 }
 .header {
   color: #1e1f36;
@@ -64,37 +67,37 @@ top: -10px;
   font-size: 14px;
   font-weight: 400;
 }
-.accordion p{
-  color: #4B4C5F;
-font-family: Kumbh Sans;
-font-size: 13px;
-font-style: normal;
-font-weight: 400;
-line-height: normal; 
+.accordion p {
+  color: #4b4c5f;
+  font-family: Kumbh Sans;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 
-display: flex;
-justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .accordion:hover {
   color: #f47b56;
 }
-.accordion:active p{  /* works while on click */
-color: #f47b56;
-font-size: 14px;
-font-weight: 700;
+.accordion:active p {
+  /* works while on click */
+  color: #f47b56;
+  font-size: 14px;
+  font-weight: 700;
 }
 /* creating new class .pressed  */
 /* and activate it using script.js */
 .accordion.pressed {
-
 }
 /* why this is not working? i had to add .pressed ClassList toggle  ?????????? */
 .accordion::after {
-font-family: Kumbh Sans;
-font-size: 14px;
-font-style: normal;
-font-weight: 700;
-line-height: normal; 
+  font-family: Kumbh Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .answer-panel {
@@ -103,18 +106,59 @@ line-height: normal;
   background-color: #fff;
   border-bottom: 1px solid #ccc;
   color: #787887;
-font-family: Kumbh Sans;
-font-size: 12px;
-font-style: normal;
-font-weight: 400;
-line-height: 18px; /* 150% */ 
+  font-family: Kumbh Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 150% */
 }
 
-
 @media (min-width: 375px) and (max-width: 1440px) {
-  .card {
-    width: 1440px;
+  /* 
+  <div class="card">
+    <section class="header-img"></section>
+    <section class="shade-img"></section>
+    <h1 class="header">FAQ</h1>
 
+    <section class="accordionSection">
+      <button class="accordion"> <p> ... </p> </button>
+      <div class="answer-panel">
+        <p id="answer"> ... </p>
+      </div>
+    </section>
+  </div> 
+*/
+
+  .card {
+    width: 920px;
+    height: 510px; 
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .image-background {
+    /* border: solid; */
+    position: relative;
+    left: -80px;
+    top: 8%;
+  }
+  .header-img {
+    background-image: url("images/illustration-woman-online-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 450px;
+    height: 341px;
+    /* background-size: 150% 150%; Adjust the dimensions as needed */
+  }
+  .shade-img {
+    left: 100px;
+  }
+  .accordionSection {
+    /* border: solid; */
+    margin-left: -20px;
+  }
+  .header {
+    margin: -10px auto 20px auto;
   }
 
 }
