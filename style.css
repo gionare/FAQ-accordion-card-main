@@ -51,6 +51,8 @@ body {
   font-weight: 700;
   line-height: normal;
   margin: 120px auto 0px auto;
+  display: flex;
+  justify-content: center;
 }
 
 .accordionSection {
@@ -159,6 +161,7 @@ body {
   }
   .header {
     margin: -10px auto 20px auto;
+    justify-content: left;
   }
 
 }
