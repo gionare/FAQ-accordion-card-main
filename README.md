@@ -1,7 +1,3 @@
-# Frontend Mentor - FAQ accordion card solution
-
-This is a solution to the [FAQ accordion card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam).
-
 ## Table of contents
 
 - [Overview](#overview)
@@ -27,12 +23,12 @@ Users should be able to:
 - Hide/Show the answer to a question when the question is clicked
 
 ### Screenshot
-<img src="./design/desktop-preview.jpg" alt="image preview" width= "400">
+<img src="./design/desktop-preview.jpg" alt="image preview" width= "500">
 
 ### Links
 
-- Solution URL: [Github source code: ](https://github.com/gionare/FAQ-accordion-card-main)
-- Live Site URL: [live site URL: ](https://gionare.github.io/FAQ-accordion-card-main/)
+- Solution URL: [Github source code ](https://github.com/gionare/FAQ-accordion-card-main)
+- Live Site URL: [live site URL ](https://gionare.github.io/FAQ-accordion-card-main/)
 
 ## My process
 
@@ -48,9 +44,7 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
+See this section of my major learnings while working through this project. Providing code samples of areas i want to highlight. Great way to reinforce own knowledge.
 
 ```html
 <div class="card">
@@ -127,8 +121,6 @@ accArray.forEach(function (eachAccordion) {
   });
 });
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
 ### Continued development
 
